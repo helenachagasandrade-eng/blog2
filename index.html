@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft blog</title>
+  <style>
+  header
+ {
+  background-color: #1E4D2B; 
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 4px solid #C5A059; 
+  font-family: sans-serif;
+}
+
+main {
+  background-color: #312E2B; 
+  color: #FFFFFF;
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 21px;
+  font-family: sans-serif;
+}
+
+article {
+  display: flex;
+  background-color: #4A4A4A; 
+  border: 6px solid #1A1A1A;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+img {
+  width: 200px;
+  height: 143px;
+  padding: 0px;
+  border: 3px solid #C5A059;
+  margin-right: 15px;
+}
+
+.artigo-autor {
+  font-weight: bold;
+  color: #A9A9A9;
+}
+
+
+button {
+  background-color: #4A5C25;
+  color: #FFFFFF;
+  border: 3px solid #1C240B; 
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+  image-rendering: pixelated; 
+
+
+
+
+
+button span {
+  margin-left: 5px;
+  background-color: #4A5C25; 
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+   </style>
+  
+   </head>
+<body>
+  <header>
+  <h1> Minecraft bedrock e Minecraft Java </h1>
+  <p>  Diferenças das versões </p>
+  </header>
+     <main>
+      <article>
+            <div>
+      <img  src="img/minecraftfoto1.jpg"
+       alt="personagens do minecraft ao fundo">
+       <p class="artigo-autor">Por: Helena Chagas </p>
+    <p>Bem vindo ao meu blog aqui irei compartilhar conteúdo de Minecraft
+    </p>
+            
+      <button> ❤️ <span>0</span></button>
+        <button> 👎 <span>0</span></button>
+       </div>
+     
+      </article>
+      <article>
+             <div>
+      <img  src="img/minecraftfoto2.jpg"
+       alt="personagens do minecraft ao fundo">
+       <p class="artigo-autor">Por: Helena Chagas </p>
+    <p>Bem vindo ao meu blog aqui irei compartilhar conteúdo de Minecraft
+    </p>
+      <button> ❤️ <span>0</span></button>
+        <button> 👎 <span>0</span></button>
+       
+       </div>  
+      </article>  
+
+     </main>
+  </body>
+      <script>
+      const botoes = document.querySelectorAll("button");
+      
+      botoes.forEach(function(botao){
+    botao.addEventListener("click", botaoClicado);
+    function botaoClicado(){
+        console.log("fui clicado");
+        let texto = botao.querySelector("span");
+        texto.textContent++;
+    }
+})
+      </script>
+      
+      </html>  
